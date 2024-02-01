@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model type="NR" domain="real" name="PF">
+	<Vars>
+		<Var name="phi_1" val="0"/>
+		<Var name="v_1" val="1.04"/>
+		<Var name="phi_2" val="0"/>
+		<Var name="v_2" val="1.04"/>
+		<Var name="phi_3" val="0"/>
+		<Var name="v_3" val="1.04"/>
+		<Var name="phi_4" val="0"/>
+		<Var name="v_4" val="1.04"/>
+		<Var name="phi_5" val="0"/>
+		<Var name="v_5" val="1.04"/>
+		<Var name="phi_6" val="0"/>
+		<Var name="v_6" val="1.04"/>
+		<Var name="phi_7" val="0"/>
+		<Var name="v_7" val="1.04"/>
+		<Var name="phi_8" val="0"/>
+		<Var name="v_8" val="1.04"/>
+		<Var name="phi_9" val="0"/>
+		<Var name="v_9" val="1.04"/>
+		
+	</Vars>
+	<Params>
+		<!--iako su ove vrijednosti poznate, zakomentarisat cemo ih, tako da imamo 18 nepoznatih, sto nam je bolje radi prikaza...greska koja se javlja u ovom slucaju je minorna
+		<Param name="v_1" val="1.0400"/>
+		<Param name="v_2" val="1.025"/>
+		<Param name="v_3" val="1.025"/>
+		<Param name="phi_1" val="0"/>
+		-->
+	</Params>
+	<NLEqs>
+
+<Eq fx="phi_1"/>
+<Eq fx="v_1 - 1.04"/>
+<Eq fx="9.7971744e-16*v_2^2 + 16.0*v_2*v_7*cos(phi_7 - 1.0*phi_2 + 1.5707963) - 1.63"/>
+<Eq fx="v_2 - 1.025"/>
+<Eq fx="1.0449205e-15*v_3^2 + 17.064846*v_3*v_9*cos(phi_9 - 1.0*phi_3 + 1.5707963) - 0.85"/>
+<Eq fx="v_3 - 1.025"/>
+<Eq fx="3.307379*v_4^2 + 17.361111*v_1*v_4*cos(phi_1 - 1.0*phi_4 + 1.5707963) + 11.684125*v_4*v_5*cos(phi_5 - 1.0*phi_4 + 1.6879051) + 10.688617*v_4*v_6*cos(phi_6 - 1.0*phi_4 + 1.7535179)"/>
+<Eq fx="39.308889*v_4^2 - 17.361111*v_1*v_4*sin(phi_1 - 1.0*phi_4 + 1.5707963) - 11.684125*v_4*v_5*sin(phi_5 - 1.0*phi_4 + 1.6879051) - 10.688617*v_4*v_6*sin(phi_6 - 1.0*phi_4 + 1.7535179)"/>
+<Eq fx="2.5527921*v_5^2 + 6.0920142*v_5*v_7*cos(phi_7 - 1.0*phi_5 + 1.7669971) + 11.684125*v_4*v_5*cos(phi_4 - 1.0*phi_5 + 1.6879051) + 1.25"/>
+<Eq fx="17.33823*v_5^2 - 11.684125*v_4*v_5*sin(phi_4 - 1.0*phi_5 + 1.6879051) - 6.0920142*v_5*v_7*sin(phi_7 - 1.0*phi_5 + 1.7669971) + 0.5"/>
+<Eq fx="3.2242004*v_6^2 + 5.7334134*v_6*v_9*cos(phi_9 - 1.0*phi_6 + 1.796306) + 10.688617*v_4*v_6*cos(phi_4 - 1.0*phi_6 + 1.7535179) + 0.9"/>
+<Eq fx="15.840927*v_6^2 - 10.688617*v_4*v_6*sin(phi_4 - 1.0*phi_6 + 1.7535179) - 5.7334134*v_6*v_9*sin(phi_9 - 1.0*phi_6 + 1.796306) + 0.3"/>
+<Eq fx="2.8047269*v_7^2 + 6.0920142*v_5*v_7*cos(phi_5 - 1.0*phi_7 + 1.7669971) + 16.0*v_2*v_7*cos(phi_2 - 1.0*phi_7 + 1.5707963) + 13.793103*v_7*v_8*cos(phi_8 - 1.0*phi_7 + 1.688308)"/>
+<Eq fx="35.445613*v_7^2 - 16.0*v_2*v_7*sin(phi_2 - 1.0*phi_7 + 1.5707963) - 13.793103*v_7*v_8*sin(phi_8 - 1.0*phi_7 + 1.688308) - 6.0920142*v_5*v_7*sin(phi_5 - 1.0*phi_7 + 1.7669971)"/>
+<Eq fx="2.77221*v_8^2 + 13.793103*v_7*v_8*cos(phi_7 - 1.0*phi_8 + 1.688308) + 9.8522167*v_8*v_9*cos(phi_9 - 1.0*phi_8 + 1.688308) + 1.0"/>
+<Eq fx="23.303249*v_8^2 - 13.793103*v_7*v_8*sin(phi_7 - 1.0*phi_8 + 1.688308) - 9.8522167*v_8*v_9*sin(phi_9 - 1.0*phi_8 + 1.688308) + 0.35"/>
+<Eq fx="2.4370966*v_9^2 + 5.7334134*v_6*v_9*cos(phi_6 - 1.0*phi_9 + 1.796306) + 17.064846*v_3*v_9*cos(phi_3 - 1.0*phi_9 + 1.5707963) + 9.8522167*v_8*v_9*cos(phi_8 - 1.0*phi_9 + 1.688308)"/>
+<Eq fx="32.153862*v_9^2 - 17.064846*v_3*v_9*sin(phi_3 - 1.0*phi_9 + 1.5707963) - 9.8522167*v_8*v_9*sin(phi_8 - 1.0*phi_9 + 1.688308) - 5.7334134*v_6*v_9*sin(phi_6 - 1.0*phi_9 + 1.796306)"/>
+	</NLEqs>
+</Model>

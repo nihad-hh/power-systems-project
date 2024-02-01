@@ -1,0 +1,3 @@
+Što se tiče Matlaba, dovoljno je pokrenuti fajl Tokovi_snaga.mlx. Ostali fajlovi su ili funkcije ili pomoćni m fajlovi koje smo koristili prilikom izrade.
+
+Što se tiče Model Solvera, potrebno je prebaciti fajlove PF_My9.xml i printResults.py u izvorni folder Model Solvera i pokrenuti na način objašnjen u izvještaju.
